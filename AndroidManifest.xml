@@ -61,6 +61,10 @@
             android:name="com.map.jancokan.TrackActivity"
             android:label="@string/title_activity_track" >
         </activity>
+        <activity
+            android:name="com.map.jancokan.UniversityActivity"
+            android:label="@string/title_activity_university" >
+        </activity>
     </application>
 
 </manifest>

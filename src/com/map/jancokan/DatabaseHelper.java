@@ -27,7 +27,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
 		values.put("universitySureName", "Universitas Negeri Surabaya");
 		values.put("address", "Jl Ketitang Ora Eruh");
 		values.put("officePhone", "999");
-		values.put("details", "iki detaile");
+		values.put("details", "");
 		db.insert("university", "universityName", values);
 		
 		values.put("universityName", "UNAIR");

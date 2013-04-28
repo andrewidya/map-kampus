@@ -19,7 +19,6 @@ public class MainActivity extends ListActivity implements OnClickListener {
 	
 	ImageButton mapButton, searchButton, locationButton;
 	EditText locationInput;
-	//ListView listAdapter;
 	
 	protected Cursor cursor;
 	protected ListAdapter adapter;
@@ -31,7 +30,6 @@ public class MainActivity extends ListActivity implements OnClickListener {
 		setContentView(R.layout.main);
 		
 		locationInput = (EditText) findViewById(R.id.location_input);
-		//listAdapter = (ListView) findViewById(R.id.list_view);
 		
 		mapButton = (ImageButton) findViewById(R.id.map_button);
 		mapButton.setOnClickListener(this);
@@ -55,6 +53,9 @@ public class MainActivity extends ListActivity implements OnClickListener {
 		//	intent.putExtra(EXTRA_MESSAGE, message);
 		//	startActivity(intent);
 		//	break;
+		case R.id.search_button:
+			search();
+			break;
 		case R.id.location_button:
 			locationOnMap();
 			break;
@@ -75,15 +76,14 @@ public class MainActivity extends ListActivity implements OnClickListener {
 	}
 	
 	// This for database operations
-	@SuppressWarnings("deprecation")
-	public void search(View view) {
+	public void search() {
 	    // || is the concatenation operation in SQLite
 	            cursor = db.rawQuery("SELECT _id, universityName, universitySureName, address FROM university WHERE universityName || ' ' || universitySureName LIKE ?", 
 	            		new String[]{"%" + locationInput.getText().toString() + "%"});
 	            
-	            String[] from = new String[] {"universityName", "universitySureName", "address"};
-	            int[] to = new int[] {R.id.universityName, R.id.universitySureName, R.id.address};	            	            
-	            adapter = new SimpleCursorAdapter(this, R.layout.university_list_item, cursor, from, to);
+	            //String[] from = new String[] {"universityName", "universitySureName", "address"};
+	            //int[] to = new int[] {R.id.universityName, R.id.universitySureName, R.id.address};	            	            
+	            adapter = new SimpleCursorAdapter(this, R.layout.university_list_item, cursor, new String[] {"universityName", "universitySureName", "address"}, new int[] {R.id.universityName, R.id.universitySureName, R.id.address}, 0);
 	            setListAdapter(adapter);
 	}	
 }

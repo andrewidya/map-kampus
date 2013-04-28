@@ -6,11 +6,46 @@
     <LinearLayout
         android:id="@+id/linearLayout1"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal" >
+    
+	<EditText
+	    android:id="@+id/location_input"
+	    android:layout_width="0dp"
+	    android:layout_height="wrap_content"
+	    android:layout_weight="4"
+	    android:hint="@string/location_edit" />
 
-        <include
+	<ImageButton
+	    android:id="@+id/search_button"
+	    android:layout_width="45dp"
+	    android:layout_height="45dp"
+	    android:background="#ffffff"
+	    android:contentDescription="@string/search_description"
+	    android:onClick="search"
+	    android:src="@drawable/search" />
+
+	<ImageButton
+	    android:id="@+id/map_button"
+	    android:layout_width="45dp"
+	    android:layout_height="45dp"
+	    android:background="#ffffff"
+	    android:contentDescription="@string/map_description"
+	    android:src="@drawable/map_icon" />
+
+	<ImageButton
+	    android:id="@+id/location_button"
+	    android:layout_width="45dp"
+	    android:layout_height="45dp"
+	    android:background="#ffffff"
+	    android:contentDescription="@string/location_description"
+	    android:src="@drawable/latitude_icon" />
+
+       <!--  <include
             android:id="@+id/search"
-            layout="@layout/search" />
+            layout="@layout/search" /> -->
     </LinearLayout>
 
     <!--

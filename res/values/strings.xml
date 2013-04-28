@@ -15,5 +15,10 @@
     <string name="search_description">Search desire location</string>
     <string name="title_activity_navigate">NavigateActivity</string>
     <string name="title_activity_track">TrackActivity</string>
+    <string name="title_activity_university">UniversityActivity</string>
+    <string name="university_name">Nama Kampus</string>
+    <string name="university_description">Lengkap</string>
+    <string name="university_address">Alamat</string>
+    <string name="university_details">Keterangan</string>
 
 </resources>
