@@ -37,6 +37,7 @@ public class NavigateActivity extends android.support.v4.app.FragmentActivity im
 	
 	private GoogleMap map;
 	LatLng coordinate = null;
+	private String message = null;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -48,14 +49,16 @@ public class NavigateActivity extends android.support.v4.app.FragmentActivity im
 
 	private void checkDestination() {
 		// TODO Auto-generated method stub
-		Intent intent = getIntent();
-		String message = null;
-		if(intent.hasExtra(MainActivity.EXTRA_MESSAGE)) {
-			message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE).toString();
+		/*Intent intent = getIntent();
+		if(intent.hasExtra(UniversityActivity.UNIVERSITY_LOCATION)) {
+			message = intent.getStringExtra(UniversityActivity.UNIVERSITY_LOCATION).toString();
 			setDestination(message);
 		} else {
 			message = null;
-		}
+		}*/
+		Intent intent =getIntent();
+		message = intent.getStringExtra(UniversityActivity.UNIVERSITY_LOCATION);
+		setDestination(message);
 	}
 	
 	private void setDestination(String destination) {
@@ -63,12 +66,12 @@ public class NavigateActivity extends android.support.v4.app.FragmentActivity im
 		try {
 			List<Address> addressesNames = geocoder.getFromLocationName(destination, 3);			
 			if(addressesNames.size() > 0) {	
-				coordinate = new LatLng(addressesNames.get(0).getLatitude(), addressesNames.get(0).getLongitude());				
+				coordinate = new LatLng(addressesNames.get(0).getLatitude(), addressesNames.get(0).getLongitude());
+				map.addMarker(new MarkerOptions().position(coordinate).title(message).snippet("Destination Place")).showInfoWindow();
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		map.addMarker(new MarkerOptions().position(coordinate).title(destination).snippet("Destination Place")).showInfoWindow();
 	}
 
 	private void setupIfNeeded() {
