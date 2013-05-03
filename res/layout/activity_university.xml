@@ -14,83 +14,98 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" >
         
-        <LinearLayout 
+        <LinearLayout
+            style="@style/LayoutBackground1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" >
             
             <TextView 
             	android:layout_width="0dp"
-            	android:layout_height="40dp"
+            	android:layout_height="wrap_content"
             	android:layout_weight="1"
-            	android:text="@string/university_name" />
+            	android:text="@string/university_name"
+            	style="@style/HeaderText" />
             <TextView 
                 android:id="@+id/university_name"
                 android:layout_width="0dp"
-                android:layout_height="40dp"
-                android:layout_weight="2" />
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                style="@style/ContentText" />
             
         </LinearLayout>
         
         <LinearLayout 
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content"
+            style="@style/LayoutBackground2" >
             
             <TextView 
             	android:layout_width="0dp"
-            	android:layout_height="40dp"
+            	android:layout_height="wrap_content"
             	android:layout_weight="1"
-            	android:text="@string/university_description" />
+            	android:text="@string/university_description"
+            	style="@style/HeaderText" />
             <TextView 
                 android:id="@+id/university_description"
                 android:layout_width="0dp"
-                android:layout_height="40dp"
-                android:layout_weight="2" />
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                style="@style/ContentText" />
             
         </LinearLayout>
         
         <LinearLayout 
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content"
+            style="@style/LayoutBackground1" >
             
             <TextView 
             	android:layout_width="0dp"
-            	android:layout_height="40dp"
+            	android:layout_height="wrap_content"
             	android:layout_weight="1"
-            	android:text="@string/university_address" />
+            	android:text="@string/university_address"
+            	style="@style/HeaderText" />
             <TextView 
                 android:id="@+id/university_address"
                 android:layout_width="0dp"
-                android:layout_height="40dp"
-                android:layout_weight="2" />
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                style="@style/ContentText" />
             
         </LinearLayout>
         
         <LinearLayout 
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content"
+            style="@style/LayoutBackground2" >
             
             <TextView 
             	android:layout_width="0dp"
-            	android:layout_height="40dp"
+            	android:layout_height="wrap_content"
             	android:layout_weight="1"
-            	android:text="@string/university_phone" />
+            	android:text="@string/university_phone"
+            	style="@style/HeaderText" />
             <TextView 
                 android:id="@+id/university_phone"
                 android:layout_width="0dp"
-                android:layout_height="40dp"
-                android:layout_weight="2" />
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                style="@style/ContentText" />
             
         </LinearLayout>
         
         <LinearLayout 
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content"
+            style="@style/LayoutBackground1"
+            android:padding="8dp" >
             
             <TextView 
             	android:layout_width="0dp"
-            	android:layout_height="40dp"
+            	android:layout_height="wrap_content"
             	android:layout_weight="1"
-            	android:text="@string/university_details" />
+            	android:text="@string/university_details"
+            	style="@style/HeaderText" />
             
         </LinearLayout>
         
@@ -107,11 +122,16 @@
         android:orientation="vertical" >
         
         
-            <TextView 
-                android:id="@+id/university_details"
+            <ScrollView 
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textIsSelectable="false" />
+                android:layout_height="wrap_content" >
+        		<TextView 
+	                android:id="@+id/university_details"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:textIsSelectable="false"
+	                style="@style/ContentText" />
+            </ScrollView>
     </LinearLayout>
 
 </RelativeLayout>

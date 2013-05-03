@@ -131,11 +131,12 @@ containing a value of this type.
     public static final class drawable {
         public static final int background=0x7f020000;
         public static final int car_icon=0x7f020001;
-        public static final int ic_launcher=0x7f020002;
-        public static final int latitude_icon=0x7f020003;
-        public static final int map_icon=0x7f020004;
-        public static final int search=0x7f020005;
-        public static final int search_icon=0x7f020006;
+        public static final int college=0x7f020002;
+        public static final int ic_launcher=0x7f020003;
+        public static final int latitude_icon=0x7f020004;
+        public static final int map_icon=0x7f020005;
+        public static final int search=0x7f020006;
+        public static final int search_icon=0x7f020007;
     }
     public static final class id {
         public static final int address=0x7f040015;
@@ -287,6 +288,10 @@ containing a value of this type.
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f060001;
+        public static final int ContentText=0x7f060005;
+        public static final int HeaderText=0x7f060002;
+        public static final int LayoutBackground1=0x7f060003;
+        public static final int LayoutBackground2=0x7f060004;
     }
     public static final class styleable {
         /** Attributes that can be used with a MapAttrs.
