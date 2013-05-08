@@ -22,5 +22,6 @@
     <string name="university_address">Alamat</string>
     <string name="university_details">Keterangan</string>
     <string name="university_phone">Office Phone</string>
+    <string name="university_details_header">Detail Map</string>
 
 </resources>

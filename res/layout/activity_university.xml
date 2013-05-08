@@ -1,137 +1,112 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".UniversityActivity" >
-    
-    <RelativeLayout 
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/properties_layout" >
-        
-        <LinearLayout 
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
-        
-        <LinearLayout
-            style="@style/LayoutBackground1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
-            
-            <TextView 
-            	android:layout_width="0dp"
-            	android:layout_height="wrap_content"
-            	android:layout_weight="1"
-            	android:text="@string/university_name"
-            	style="@style/HeaderText" />
-            <TextView 
-                android:id="@+id/university_name"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                style="@style/ContentText" />
-            
-        </LinearLayout>
-        
-        <LinearLayout 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/LayoutBackground2" >
-            
-            <TextView 
-            	android:layout_width="0dp"
-            	android:layout_height="wrap_content"
-            	android:layout_weight="1"
-            	android:text="@string/university_description"
-            	style="@style/HeaderText" />
-            <TextView 
-                android:id="@+id/university_description"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                style="@style/ContentText" />
-            
-        </LinearLayout>
-        
-        <LinearLayout 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/LayoutBackground1" >
-            
-            <TextView 
-            	android:layout_width="0dp"
-            	android:layout_height="wrap_content"
-            	android:layout_weight="1"
-            	android:text="@string/university_address"
-            	style="@style/HeaderText" />
-            <TextView 
-                android:id="@+id/university_address"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                style="@style/ContentText" />
-            
-        </LinearLayout>
-        
-        <LinearLayout 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/LayoutBackground2" >
-            
-            <TextView 
-            	android:layout_width="0dp"
-            	android:layout_height="wrap_content"
-            	android:layout_weight="1"
-            	android:text="@string/university_phone"
-            	style="@style/HeaderText" />
-            <TextView 
-                android:id="@+id/university_phone"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                style="@style/ContentText" />
-            
-        </LinearLayout>
-        
-        <LinearLayout 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/LayoutBackground1"
-            android:paddingLeft="8dp" >
-            
-            <TextView 
-            	android:layout_width="0dp"
-            	android:layout_height="wrap_content"
-            	android:layout_weight="1"
-            	android:text="@string/university_details"
-            	style="@style/HeaderText" />
-            
-        </LinearLayout>
-        
-        </LinearLayout>
-    </RelativeLayout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="match_parent"
+   android:layout_height="match_parent"
+   android:orientation="vertical" >
+   <LinearLayout 
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:padding="8dp"
+       android:background="@drawable/header_bg" >
+       <TextView 
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="@string/university_details_header"
+           android:gravity="right" />       
+   </LinearLayout>
+   <ScrollView 
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content" >
+	   <LinearLayout
+	       android:layout_width="match_parent"
+		   android:layout_height="wrap_content"
+		   android:orientation="vertical" >
+		   <TextView
+		       android:layout_width="match_parent"
+			   android:layout_height="wrap_content"
+			   android:text="@string/university_name"
+			   style="@style/CollegeDetailsHeader" />
+		   <View
+		       android:layout_width="match_parent"
+		       android:layout_height="1dip"
+		       android:background="#e5e5e5" />
+		   <TextView 
+		       android:id="@+id/university_name"
+		       android:layout_width="match_parent"
+		       android:layout_height="wrap_content"
+		       style="@style/CollegeDetailsContent" />
+		   <View
+		       android:layout_width="match_parent"
+		       android:layout_height="1dip"
+		       android:background="#e5e5e5" />
+		   <TextView
+		       android:layout_width="match_parent"
+		       android:layout_height="wrap_content"
+		       android:text="@string/university_description"
+		       style="@style/CollegeDetailsHeader" />
+		   <View
+		       android:layout_width="match_parent"
+		       android:layout_height="1dip"
+		       android:background="#e5e5e5" />
+		   <TextView 
+		       android:id="@+id/university_description"
+		       android:layout_width="match_parent"
+		       android:layout_height="wrap_content"
+		       style="@style/CollegeDetailsContent" />
+		   <View
+		       android:layout_width="match_parent"
+		       android:layout_height="1dip"
+		       android:background="#e5e5e5" />
+		   <TextView
+		       android:layout_width="match_parent"
+		       android:layout_height="wrap_content"
+		       android:text="@string/university_address"
+		       style="@style/CollegeDetailsHeader" />
+		   <View
+		       android:layout_width="match_parent"
+		       android:layout_height="1dip"
+		       android:background="#e5e5e5" />
+		   <TextView 
+		       android:id="@+id/university_address"
+		       android:layout_width="match_parent"
+		       android:layout_height="wrap_content"
+		       style="@style/CollegeDetailsContent" />
+		   <View
+		       android:layout_width="match_parent"
+		       android:layout_height="1dip"
+		       android:background="#e5e5e5" />
+		   <TextView
+		       android:layout_width="match_parent"
+		       android:layout_height="wrap_content"
+		       android:text="@string/university_phone"
+		       style="@style/CollegeDetailsHeader" />
+		   <View
+		       android:layout_width="match_parent"
+		       android:layout_height="1dip"
+		       android:background="#e5e5e5" />
+		   <TextView 
+		       android:id="@+id/university_phone"
+		       android:layout_width="match_parent"
+		       android:layout_height="wrap_content"
+		       style="@style/CollegeDetailsContent" />
+		   <View
+		       android:layout_width="match_parent"
+		       android:layout_height="1dip"
+		       android:background="#e5e5e5" />
+		   <TextView
+		       android:layout_width="match_parent"
+		       android:layout_height="wrap_content"
+		       android:text="@string/university_details"
+		       style="@style/CollegeDetailsHeader" />
+		   <View
+		       android:layout_width="match_parent"
+		       android:layout_height="1dip"
+		       android:background="#e5e5e5" />
+		   <TextView 
+		       android:id="@+id/university_details"
+		       android:layout_width="match_parent"
+		       android:layout_height="wrap_content"
+		       style="@style/CollegeDetailsContent" />
+	   	</LinearLayout>
+   </ScrollView>
 
-    
-
-    <LinearLayout
-        android:id="@+id/description_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/properties_layout"
-        android:orientation="vertical" >
-        
-        
-            <ScrollView 
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
-        		<TextView 
-	                android:id="@+id/university_details"
-	                android:layout_width="match_parent"
-	                android:layout_height="wrap_content"
-	                android:textIsSelectable="false"
-	                style="@style/ContentText" />
-            </ScrollView>
-    </LinearLayout>
-
-</RelativeLayout>
+</LinearLayout>

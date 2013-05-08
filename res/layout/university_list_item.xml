@@ -3,7 +3,6 @@
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/header_bg"
     android:padding="2dp" >
 	    <ImageView
 	        android:id="@+id/logo"
@@ -16,7 +15,8 @@
 		    android:layout_width="wrap_content"
 		    android:layout_height="wrap_content"
 		    android:layout_alignParentRight="true"
-		    android:layout_toRightOf="@id/logo" />
+		    android:layout_toRightOf="@id/logo"
+		    style="@style/CollegeName" />
 	        
 		<TextView
 		    android:id="@+id/universitySureName"
@@ -24,7 +24,8 @@
 		    android:layout_height="wrap_content"
 		    android:layout_alignParentRight="true"
 		    android:layout_below="@id/universityName"
-		    android:layout_toRightOf="@id/logo" />
+		    android:layout_toRightOf="@id/logo"
+		    style="@style/CollegeSureName" />
 	
 		<TextView
 		    android:id="@+id/address"
@@ -32,6 +33,7 @@
 		    android:layout_height="wrap_content"
 		    android:layout_alignRight="@+id/universitySureName"
 		    android:layout_below="@id/universitySureName"
-		    android:layout_toRightOf="@id/logo" />
+		    android:layout_toRightOf="@id/logo"
+		    style="@style/CollegeAddress" />
 
 </RelativeLayout>

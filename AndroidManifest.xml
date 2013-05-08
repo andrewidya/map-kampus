@@ -47,7 +47,8 @@
         </activity>
         <activity
             android:name="com.map.kampus.MapActivity"
-            android:label="@string/title_activity_map" >
+            android:label="@string/title_activity_map"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
         </activity>
         <activity
             android:name="com.map.kampus.LatitudeActivity"

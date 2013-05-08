@@ -41,5 +41,45 @@
         <item name="android:paddingLeft">8dp</item>
         <item name="android:paddingRight">8dp</item>
     </style>
+    <style name="CollegeName" parent="@android:style/TextAppearance" >
+        <item name="android:typeface">sans</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#0f0f0f</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+    <style name="CollegeSureName" parent="@android:style/TextAppearance" >
+        <item name="android:typeface">sans</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#0f0f0f</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+    <style name="CollegeAddress" parent="@android:style/TextAppearance" >
+        <item name="android:typeface">sans</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:textColor">#999999</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+    <style name="CollegeDetailsHeader" parent="@android:style/TextAppearance" >
+        <item name="android:typeface">sans</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#007f00</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingTop">8dp</item>
+    </style>
+    <style name="CollegeDetailsContent" parent="@android:style/TextAppearance" >
+        <item name="android:typeface">sans</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#333333</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:paddingTop">4dp</item>
+    </style>
 
 </resources>
