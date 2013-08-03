@@ -23,5 +23,7 @@
     <string name="university_details">Keterangan</string>
     <string name="university_phone">Office Phone</string>
     <string name="university_details_header">Detail Map</string>
+    <string name="address_on_map">Alamat:</string>
+    <string name="distance_on_map">Jarak:</string>
 
 </resources>

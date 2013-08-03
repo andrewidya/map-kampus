@@ -57,11 +57,9 @@ public class LatitudeActivity extends android.support.v4.app.FragmentActivity {
 
 	public void initializeMap() {
 		if (map == null) {
-			map = ((SupportMapFragment) getSupportFragmentManager()
-					.findFragmentById(R.id.map)).getMap();
+			map = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map)).getMap();
 			map.getUiSettings().setZoomGesturesEnabled(true);
-			marker = map.addMarker(new MarkerOptions()
-					.position(new LatLng(0, 0)));
+			marker = map.addMarker(new MarkerOptions().position(new LatLng(0, 0)));
 			marker.setVisible(false);
 			if (map != null) {
 				setupMediaLocationProvider();
@@ -149,11 +147,9 @@ public class LatitudeActivity extends android.support.v4.app.FragmentActivity {
 		Geocoder geocoder = new Geocoder(this, Locale.getDefault());
 
 		try {
-			List<Address> addresses = geocoder.getFromLocation(
-					coordinate.latitude, coordinate.longitude, 1);
+			List<Address> addresses = geocoder.getFromLocation(coordinate.latitude, coordinate.longitude, 1);
 			if (addresses.size() > 0) {
-				for (int index = 0; index < addresses.get(0)
-						.getMaxAddressLineIndex(); index++) {
+				for (int index = 0; index < addresses.get(0).getMaxAddressLineIndex(); index++) {
 					address += addresses.get(0).getAddressLine(index) + " ";
 					Log.i(address, address);
 				}

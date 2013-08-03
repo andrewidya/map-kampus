@@ -28,8 +28,7 @@ public class MapActivity extends android.support.v4.app.FragmentActivity {
 
 	public void initializeMap() {
 		if (map == null) {
-			map = ((SupportMapFragment) getSupportFragmentManager()
-					.findFragmentById(R.id.map)).getMap();
+			map = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map)).getMap();
 			map.getUiSettings().setZoomGesturesEnabled(true);
 		}
 	}

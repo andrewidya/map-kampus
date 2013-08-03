@@ -28,9 +28,7 @@ public class UniversityActivity extends Activity {
 		Intent intent = getIntent();
 		universityCode = intent.getStringExtra(MainActivity.UNIVERSITY_ID);
 		SQLiteDatabase db = (new DatabaseHelper(this)).getWritableDatabase();
-		Cursor cursor = db
-				.rawQuery(
-						"SELECT _id, universityName, universitySureName, address, officePhone, details FROM university WHERE universityName || ' ' || universitySureName LIKE ?",
+		Cursor cursor = db.rawQuery("SELECT _id, universityName, universitySureName, address, officePhone, details FROM university WHERE universityName || ' ' || universitySureName LIKE ?",
 						new String[] { "%" + universityCode.toString() + "%" });
 
 		if (cursor.getCount() >= 1) {
