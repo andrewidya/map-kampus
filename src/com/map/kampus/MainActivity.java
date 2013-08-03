@@ -26,6 +26,7 @@ public class MainActivity extends Activity implements OnClickListener {
 
 	protected Cursor cursor;
 	protected ListAdapter adapter;
+	protected DatabaseHelper data;
 	protected SQLiteDatabase db;
 
 	@Override
@@ -44,7 +45,10 @@ public class MainActivity extends Activity implements OnClickListener {
 		locationButton = (ImageButton) findViewById(R.id.location_button);
 		locationButton.setOnClickListener(this);
 
-		db = (new DatabaseHelper(this)).getWritableDatabase();
+		//db = (new DatabaseHelper(this)).getWritableDatabase();
+		data = new DatabaseHelper(this);
+		data.createDatabase();
+		data.openDatabase();
 	}
 
 	@Override
@@ -76,8 +80,9 @@ public class MainActivity extends Activity implements OnClickListener {
 	// This for database operations
 	public void search() {
 		// || is the concatenation operation in SQLite
+		db = data.getReadableDatabase();
 		cursor = db.rawQuery("SELECT _id, universityName, universitySureName, address FROM university WHERE universityName || ' ' || universitySureName LIKE ?", new String[] { "%" + locationInput.getText().toString() + "%" });
-
+		
 		adapter = new SimpleCursorAdapter(this, R.layout.university_list_item, cursor, new String[] { "universityName", "universitySureName", "address" }, new int[] { R.id.universityName,	R.id.universitySureName, R.id.address }, 0);
 		
 		list = (ListView) findViewById(R.id.listView1);
@@ -90,10 +95,8 @@ public class MainActivity extends Activity implements OnClickListener {
 					int position, long id) {
 				// TODO Auto-generated method stub
 				Cursor cursor = (Cursor) list.getItemAtPosition(position);
-				String universitiName = cursor.getString(cursor
-						.getColumnIndexOrThrow("universityName"));
-				Intent intent = new Intent(getApplicationContext(),
-						UniversityActivity.class);
+				String universitiName = cursor.getString(cursor.getColumnIndexOrThrow("universityName"));
+				Intent intent = new Intent(getApplicationContext(),	UniversityActivity.class);
 				intent.putExtra(UNIVERSITY_ID, universitiName);
 				startActivity(intent);
 
